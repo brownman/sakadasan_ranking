@@ -1,0 +1,13 @@
+!!! XML
+!!!
+%html
+  %head
+    %meta{ 'http-equiv' => 'content', :content => 'text/html; charset=utf-8'}
+  %body
+    %div#container
+      %a{:href=>"http://twitter.com/sakadasan"} sakadasan 
+      座布団ランキング
+      %div#ranking
+        -@ranking.each_with_index do |model,idx|
+          %p #{idx+1}位 @#{model.user_id}さん #{model.count}枚
+        
